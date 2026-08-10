@@ -286,6 +286,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 176762420}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0496d885bb61449408368966ebda0de4,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2125584683}
     - targetCorrespondingSourceObject: {fileID: -663287717785484501, guid: 0496d885bb61449408368966ebda0de4,
         type: 3}
       insertIndex: -1
@@ -334,7 +338,6 @@ MonoBehaviour:
   - vrc.v_ih
   - vrc.v_ou
   - vrc.v_e
-  - 
   unityVersion: 
   portraitCameraPositionOffset: {x: 0, y: 0, z: 0}
   portraitCameraRotationOffset: {x: 0, y: 1, z: 0, w: -0.00000004371139}
@@ -1099,6 +1102,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &2125584683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176762419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1427037861, guid: 4ecd63eff847044b68db9453ce219299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  launchedFromSDKPipeline: 0
+  completedSDKPipeline: 0
+  blueprintId: 
+  contentType: 0
+  assetBundleUnityVersion: 
+  fallbackStatus: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

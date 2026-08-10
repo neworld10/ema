@@ -114,9 +114,9 @@ public static class EmaSceneSetup
             if (visemeField.FieldType.IsArray && visemeField.FieldType.GetElementType() == typeof(string))
             {
                 var arr = (string[])val;
-                if (arr == null || arr.Length < 6)
+                if (arr == null || arr.Length != 6)
                 {
-                    arr = new string[7];
+                    arr = new string[6];
                     visemeField.SetValue(desc, arr);
                 }
                 string[] order = { "aa", "oh", "ch", "ih", "ou", "e" };
