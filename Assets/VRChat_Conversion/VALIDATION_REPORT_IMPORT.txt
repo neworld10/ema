@@ -1,0 +1,86 @@
+SakurabaEma FBX import verification
+====================================
+animationType: Human
+avatar found: True
+avatar valid: True
+avatar humanoid: True
+mapped human bones: 53
+  Hips <- Hips
+  LeftUpperLeg <- LeftUpperLeg
+  RightUpperLeg <- RightUpperLeg
+  LeftLowerLeg <- LeftLowerLeg
+  RightLowerLeg <- RightLowerLeg
+  LeftFoot <- LeftFoot
+  RightFoot <- RightFoot
+  Spine <- Spine
+  Chest <- Chest
+  Neck <- Neck
+  Head <- Head
+  LeftShoulder <- LeftShoulder
+  RightShoulder <- RightShoulder
+  LeftUpperArm <- LeftUpperArm
+  RightUpperArm <- RightUpperArm
+  LeftLowerArm <- LeftLowerArm
+  RightLowerArm <- RightLowerArm
+  LeftHand <- LeftHand
+  RightHand <- RightHand
+  LeftToes <- LeftToes
+  RightToes <- RightToes
+  LeftEye <- LeftEye
+  RightEye <- RightEye
+  Left Thumb Proximal <- LeftThumbProximal
+  Left Thumb Intermediate <- LeftThumbIntermediate
+  Left Thumb Distal <- LeftThumbDistal
+  Left Index Proximal <- LeftIndexProximal
+  Left Index Intermediate <- LeftIndexIntermediate
+  Left Index Distal <- LeftIndexDistal
+  Left Middle Proximal <- LeftMiddleProximal
+  Left Middle Intermediate <- LeftMiddleIntermediate
+  Left Middle Distal <- LeftMiddleDistal
+  Left Ring Proximal <- LeftRingProximal
+  Left Ring Intermediate <- LeftRingIntermediate
+  Left Ring Distal <- LeftRingDistal
+  Left Little Proximal <- LeftLittleProximal
+  Left Little Intermediate <- LeftLittleIntermediate
+  Left Little Distal <- LeftLittleDistal
+  Right Thumb Proximal <- RightThumbProximal
+  Right Thumb Intermediate <- RightThumbIntermediate
+  Right Thumb Distal <- RightThumbDistal
+  Right Index Proximal <- RightIndexProximal
+  Right Index Intermediate <- RightIndexIntermediate
+  Right Index Distal <- RightIndexDistal
+  Right Middle Proximal <- RightMiddleProximal
+  Right Middle Intermediate <- RightMiddleIntermediate
+  Right Middle Distal <- RightMiddleDistal
+  Right Ring Proximal <- RightRingProximal
+  Right Ring Intermediate <- RightRingIntermediate
+  Right Ring Distal <- RightRingDistal
+  Right Little Proximal <- RightLittleProximal
+  Right Little Intermediate <- RightLittleIntermediate
+  Right Little Distal <- RightLittleDistal
+animator avatar: linked
+transforms: 347
+has Hips: True
+has Head: True
+has LeftEye: True
+has LeftHand: True
+SMR SakurabaEma_Body mesh=SakurabaEma_Body vertices=88927 blendShapes=85 bones=342 rootBone=Root
+  weightedVerts=88927/88927
+    mat Mt_SakurabaEma_Body shader=Standard mainTex=T_SakurabaEma_Body
+    mat Mt_SakurabaEma_Clothes01 shader=Standard mainTex=T_SakurabaEma_Clothes01
+    mat Mt_SakurabaEma_Clothes01_Stencil shader=Standard mainTex=T_SakurabaEma_Clothes01
+    mat Mt_SakurabaEma_Clothes02 shader=Standard mainTex=T_SakurabaEma_Clothes02
+    mat Mt_SakurabaEma_Shoes shader=Standard mainTex=T_SakurabaEma_Shoes
+    mat Mt_SakurabaEma_Shoes_Black shader=Standard mainTex=T_SakurabaEma_Shoes
+SMR SakurabaEma_Face mesh=SakurabaEma_Face vertices=8923 blendShapes=86 bones=342 rootBone=Root
+  weightedVerts=8923/8923
+    mat Mt_SakurabaEma_Face_Kurozame shader=Standard mainTex=T_SakurabaEma_Face_Ex
+    mat Mt_SakurabaEma_Face shader=Standard mainTex=T_SakurabaEma_Face
+    mat Mt_SakurabaEma_Face_NoneEdge shader=Standard mainTex=T_SakurabaEma_Face
+    mat Mt_SakurabaEma_Face_Eyelid shader=Standard mainTex=T_SakurabaEma_Face
+    mat Mt_SakurabaEma_Face_Aozame shader=Standard mainTex=T_SakurabaEma_Face_Ex
+    mat Mt_SakurabaEma_Face_Tere shader=Standard mainTex=T_SakurabaEma_Face_Ex
+SMR SakurabaEma_Hair mesh=SakurabaEma_Hair vertices=7892 blendShapes=85 bones=342 rootBone=Root
+  weightedVerts=7892/7892
+    mat Mt_SakurabaEma_Hair shader=Standard mainTex=T_SakurabaEma_Hair
+SMR count: 3

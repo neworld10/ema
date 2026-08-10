@@ -1,0 +1,23 @@
+SakurabaEma_ByPOWER VRChat conversion validation
+================================================
+
+Validation method: Blender 4.5.3, fresh FBX re-import
+
+FBX import: PASS
+Armatures: 1
+Armature bones: 428
+Mesh vertices: 101143
+Mesh polygons: 130712
+Mesh materials: 13
+Required Unity Humanoid bones: 54
+Missing required Humanoid bones: 0
+Invalid required-bone parent links: 0
+Shape keys after FBX re-import: 86
+VRChat alias shape keys: 8
+Unweighted vertices: 0
+Copied PNG textures: 20
+
+The final Unity/VRChat upload step still requires a Unity project with the
+VRChat SDK: set the FBX Rig to Humanoid, assign LipSync/Eye Look, and add
+PhysBones to the retained hair/skirt/accessory chains as described in
+README_VRChat.md.

@@ -1,0 +1,78 @@
+SakurabaEma avatar scene setup
+===============================
+Scene: Assets/VRChat_Conversion/Scenes/SakurabaEma_Avatar.unity
+avatar instantiated: SakurabaEma_ByPOWER_VRChat
+materials repaired: 13
+VRCAvatarDescriptor added: VRC.SDK3.Avatars.Components.VRCAvatarDescriptor
+-- fields of descriptor (VRC.SDK3.Avatars.Components.VRCAvatarDescriptor)
+   customExpressions : Boolean
+   expressionsMenu : VRCExpressionsMenu
+   expressionParameters : VRCExpressionParameters
+   enableEyeLook : Boolean
+   customEyeLookSettings : CustomEyeLookSettings
+   customizeAnimationLayers : Boolean
+   baseAnimationLayers : CustomAnimLayer[][CustomAnimLayer]
+   specialAnimationLayers : CustomAnimLayer[][CustomAnimLayer]
+   AnimationPreset : ScriptableObject
+   animationHashSet : List`1
+   autoFootsteps : Boolean
+   autoLocomotion : Boolean
+   collider_head : ColliderConfig
+   collider_torso : ColliderConfig
+   collider_footR : ColliderConfig
+   collider_footL : ColliderConfig
+   collider_handR : ColliderConfig
+   collider_handL : ColliderConfig
+   collider_fingerIndexL : ColliderConfig
+   collider_fingerMiddleL : ColliderConfig
+   collider_fingerRingL : ColliderConfig
+   collider_fingerLittleL : ColliderConfig
+   collider_fingerIndexR : ColliderConfig
+   collider_fingerMiddleR : ColliderConfig
+   collider_fingerRingR : ColliderConfig
+   collider_fingerLittleR : ColliderConfig
+   Name : String
+   ViewPosition : Vector3
+   Animations : AnimationSet
+   ScaleIPD : Boolean
+   lipSync : LipSyncStyle
+   lipSyncJawBone : Transform
+   lipSyncJawClosed : Quaternion
+   lipSyncJawOpen : Quaternion
+   VisemeSkinnedMesh : SkinnedMeshRenderer
+   MouthOpenBlendShapeName : String
+   VisemeBlendShapes : String[][String]
+   apiAvatar : Object
+   unityVersion : String
+   portraitCameraPositionOffset : Vector3
+   portraitCameraRotationOffset : Quaternion
+lipSync = VisemeBlendShape (VisemeBlendShape)
+visemes array: vrc.v_aa,vrc.v_oh,vrc.v_ch,vrc.v_ih,vrc.v_ou,vrc.v_e,
+-- fields of customEyeLookSettings (VRC.SDK3.Avatars.Components.VRCAvatarDescriptor+CustomEyeLookSettings)
+   eyeMovement : EyeMovements
+   leftEye : Transform
+   rightEye : Transform
+   eyesLookingStraight : EyeRotations
+   eyesLookingUp : EyeRotations
+   eyesLookingDown : EyeRotations
+   eyesLookingLeft : EyeRotations
+   eyesLookingRight : EyeRotations
+   eyelidType : EyelidType
+   upperLeftEyelid : Transform
+   upperRightEyelid : Transform
+   lowerLeftEyelid : Transform
+   lowerRightEyelid : Transform
+   eyelidsDefault : EyelidRotations
+   eyelidsClosed : EyelidRotations
+   eyelidsLookingUp : EyelidRotations
+   eyelidsLookingDown : EyelidRotations
+   eyelidsSkinnedMesh : SkinnedMeshRenderer
+   eyelidsBlendshapes : Int32[][Int32]
+set leftEye = LeftEye
+set rightEye = RightEye
+set eyelidsSkinnedMesh = SakurabaEma_Face (UnityEngine.SkinnedMeshRenderer)
+set eyelidsBlendshapes = System.Int32[]
+eyelidType = Blendshapes (1)
+blink shape idx: blink=85 left=83 right=84
+eye look configured (bones)
+enableEyeLook = True
