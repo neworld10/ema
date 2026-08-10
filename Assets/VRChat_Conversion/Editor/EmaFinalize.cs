@@ -1,8 +1,9 @@
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using VRC.SDK3.Avatars.Components;
-using VRC.SDK3.Dynamics.PhysBone;
+using VRC.SDK3.Dynamics.PhysBone.Components;
 
 public class EmaFinalize : EditorWindow
 {
@@ -12,7 +13,7 @@ public class EmaFinalize : EditorWindow
     [MenuItem("Ema/Finalize Scene")]
     public static void FinalizeScene()
     {
-        Scene scene = SceneManager.OpenScene(SCENE_PATH);
+        Scene scene = EditorSceneManager.OpenScene(SCENE_PATH);
         if (scene.isLoaded == false)
         {
             Debug.LogError("Failed to load scene: " + SCENE_PATH);
@@ -47,7 +48,7 @@ public class EmaFinalize : EditorWindow
         Transform head = FindTransformRecursive(avatar.transform, "Head");
         if (head != null)
         {
-            descriptor.viewPosition = head.localPosition;
+            descriptor.ViewPosition = head.localPosition;
             Debug.Log($"ViewPosition set to {head.localPosition}");
         }
         else
@@ -73,7 +74,7 @@ public class EmaFinalize : EditorWindow
         {
             if (target.GetComponent<VRCPhysBone>() == null)
             {
-                target.AddComponent<VRCPhysBone>();
+                target.gameObject.AddComponent<VRCPhysBone>();
                 Debug.Log($"Added VRCPhysBone to {boneName}");
             }
             else

@@ -214,15 +214,14 @@ public static class EmaSceneSetup
             sb.Add("enableEyeLook = True");
         }
 
-            var viewField = GetField(type, "ViewPosition");
-            if (viewField != null)
+        var viewField = GetField(type, "ViewPosition");
+        if (viewField != null)
+        {
+            var headTransform = FindTransform(avatar, "Head");
+            if (headTransform != null)
             {
-                var headTransform = FindTransform(avatarObject, "Head");
-                if (headTransform != null)
-                {
-                    Vector3 headPos = headTransform.localPosition;
-                    viewField.SetValue(avatarObject, headPos);
-                }
+                Vector3 headPos = headTransform.localPosition;
+                viewField.SetValue(desc, headPos);
             }
         }
     }
