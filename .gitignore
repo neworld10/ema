@@ -85,6 +85,8 @@ InitTestScene*.unity*
 /[Aa]ssets/[Ss]ceneDependencyCache*
 
 # IDE
+.opencode/
+.vscode/
 .idea/
 .vs/
 .vsconfig
