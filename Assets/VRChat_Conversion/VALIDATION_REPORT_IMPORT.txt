@@ -64,23 +64,23 @@ has Hips: True
 has Head: True
 has LeftEye: True
 has LeftHand: True
-SMR SakurabaEma_Body mesh=SakurabaEma_Body vertices=88927 blendShapes=85 bones=342 rootBone=Root
-  weightedVerts=88927/88927
+SMR SakurabaEma_Body mesh=SakurabaEma_Body vertices=83985 blendShapes=85 bones=342 rootBone=Root
+  weightedVerts=83985/83985
     mat Mt_SakurabaEma_Body shader=Standard mainTex=T_SakurabaEma_Body
     mat Mt_SakurabaEma_Clothes01 shader=Standard mainTex=T_SakurabaEma_Clothes01
     mat Mt_SakurabaEma_Clothes01_Stencil shader=Standard mainTex=T_SakurabaEma_Clothes01
     mat Mt_SakurabaEma_Clothes02 shader=Standard mainTex=T_SakurabaEma_Clothes02
     mat Mt_SakurabaEma_Shoes shader=Standard mainTex=T_SakurabaEma_Shoes
     mat Mt_SakurabaEma_Shoes_Black shader=Standard mainTex=T_SakurabaEma_Shoes
-SMR SakurabaEma_Face mesh=SakurabaEma_Face vertices=8923 blendShapes=86 bones=342 rootBone=Root
-  weightedVerts=8923/8923
+SMR SakurabaEma_Face mesh=SakurabaEma_Face vertices=8040 blendShapes=86 bones=342 rootBone=Root
+  weightedVerts=8040/8040
     mat Mt_SakurabaEma_Face_Kurozame shader=Standard mainTex=T_SakurabaEma_Face_Ex
     mat Mt_SakurabaEma_Face shader=Standard mainTex=T_SakurabaEma_Face
     mat Mt_SakurabaEma_Face_NoneEdge shader=Standard mainTex=T_SakurabaEma_Face
     mat Mt_SakurabaEma_Face_Eyelid shader=Standard mainTex=T_SakurabaEma_Face
     mat Mt_SakurabaEma_Face_Aozame shader=Standard mainTex=T_SakurabaEma_Face_Ex
     mat Mt_SakurabaEma_Face_Tere shader=Standard mainTex=T_SakurabaEma_Face_Ex
-SMR SakurabaEma_Hair mesh=SakurabaEma_Hair vertices=7892 blendShapes=85 bones=342 rootBone=Root
-  weightedVerts=7892/7892
+SMR SakurabaEma_Hair mesh=SakurabaEma_Hair vertices=7146 blendShapes=85 bones=342 rootBone=Root
+  weightedVerts=7146/7146
     mat Mt_SakurabaEma_Hair shader=Standard mainTex=T_SakurabaEma_Hair
 SMR count: 3

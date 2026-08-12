@@ -62,3 +62,6 @@ UnityEditor.log
 
 # macOS screenshots
 Screenshot*.png
+
+# Unity crash dumps
+mono_crash.mem.*
