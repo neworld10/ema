@@ -46,13 +46,23 @@ public static class EmaPhysicsSetup
             var center = (wA + wB) * 0.5f;
             var go = new GameObject(PREFIX + id);
             go.transform.SetParent(t, false);
+            // The imported FBX armature has a 100x bone scale while the
+            // skinned mesh is already normalized to avatar/world scale.
+            // PhysBone collider geometry uses the collider Transform scale,
+            // so compensate here or every gizmo and collision shape becomes
+            // 100x larger than the avatar.
+            var parentScale = t.lossyScale;
+            go.transform.localScale = new Vector3(
+                Mathf.Abs(parentScale.x) > 0.0001f ? 1f / parentScale.x : 1f,
+                Mathf.Abs(parentScale.y) > 0.0001f ? 1f / parentScale.y : 1f,
+                Mathf.Abs(parentScale.z) > 0.0001f ? 1f / parentScale.z : 1f);
             var c = go.AddComponent<VRCPhysBoneCollider>();
             c.shapeType = VRCPhysBoneColliderBase.ShapeType.Capsule;
             c.radius = radius;
             c.height = (wA - wB).magnitude;
             var axis = (wB - wA).normalized;
-            c.rotation = Quaternion.FromToRotation(Vector3.up, Quaternion.Inverse(t.rotation) * axis);
-            c.position = t.InverseTransformPoint(center);
+            c.rotation = Quaternion.FromToRotation(Vector3.up, Quaternion.Inverse(go.transform.rotation) * axis);
+            c.position = go.transform.InverseTransformPoint(center);
             colliders[id] = c;
         }
 
@@ -62,10 +72,15 @@ public static class EmaPhysicsSetup
             if (t == null) { L("bone not found: " + bone); return; }
             var go = new GameObject(PREFIX + id);
             go.transform.SetParent(t, false);
+            var parentScale = t.lossyScale;
+            go.transform.localScale = new Vector3(
+                Mathf.Abs(parentScale.x) > 0.0001f ? 1f / parentScale.x : 1f,
+                Mathf.Abs(parentScale.y) > 0.0001f ? 1f / parentScale.y : 1f,
+                Mathf.Abs(parentScale.z) > 0.0001f ? 1f / parentScale.z : 1f);
             var c = go.AddComponent<VRCPhysBoneCollider>();
             c.shapeType = VRCPhysBoneColliderBase.ShapeType.Sphere;
             c.radius = radius;
-            c.position = t.InverseTransformPoint(wCenter);
+            c.position = go.transform.InverseTransformPoint(wCenter);
             colliders[id] = c;
         }
 
@@ -118,8 +133,10 @@ public static class EmaPhysicsSetup
         foreach (var pb in physBones)
         {
             string r = pb.rootTransform != null ? pb.rootTransform.name : pb.transform.name;
-            if (r == "Hair_Root") { Assign(pb, "Head", "Chest", "LArm", "LFore", "LHand", "RArm", "RFore", "RHand"); pb.gravity = 0.1f; pb.gravityFalloff = 1f; }
-            else if (r == "Skirt_Root") { Assign(pb, "Hips", "Chest", "LLeg", "LShin", "LFoot", "RLeg", "RShin", "RFoot"); pb.gravity = 0.2f; pb.gravityFalloff = 1f; }
+            // Desktop target: retain the important body collision surfaces
+            // without letting PhysBone collision checks become Very Poor.
+            if (r == "Hair_Root") { Assign(pb, "Head", "Chest"); pb.gravity = 0.1f; pb.gravityFalloff = 1f; }
+            else if (r == "Skirt_Root") { Assign(pb, "Hips", "Chest", "LLeg", "RLeg"); pb.gravity = 0.2f; pb.gravityFalloff = 1f; }
             else if (r == "ChestRb_Root") { Assign(pb, "Chest"); pb.gravity = 0.15f; pb.gravityFalloff = 1f; }
         }
 

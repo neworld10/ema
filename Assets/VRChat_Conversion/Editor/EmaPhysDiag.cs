@@ -29,6 +29,7 @@ public static class EmaPhysDiag
         EditorSceneManager.OpenScene("Assets/VRChat_Conversion/Scenes/SakurabaEma_Avatar.unity");
         var avatar = GameObject.Find("SakurabaEma_ByPOWER_VRChat");
         if (avatar == null) { L("AVATAR NOT FOUND"); EditorApplication.Exit(0); return; }
+        L("AVATAR scale=" + avatar.transform.lossyScale.ToString("F4") + " position=" + avatar.transform.position.ToString("F4"));
 
         foreach (var pb in avatar.GetComponentsInChildren<VRCPhysBone>(true))
         {
@@ -55,6 +56,7 @@ public static class EmaPhysDiag
             L("COL " + PathOf(c.transform) + " shape=" + c.shapeType +
               " r=" + c.radius.ToString("F3") + " h=" + c.height.ToString("F3") +
               " pos=" + c.position.ToString("F3") + " rotEuler=" + c.rotation.eulerAngles.ToString("F1") +
+              " lossyScale=" + c.transform.lossyScale.ToString("F3") +
               " enabled=" + c.enabled);
         }
 
@@ -99,7 +101,9 @@ public static class EmaPhysDiag
               " sktBones=" + sktBones + " hairBones=" + hairBones +
               " sktSample=" + string.Join(",", sktNames) +
               " rootBone=" + (smr.rootBone != null ? smr.rootBone.name : "NULL") +
-              " verts=" + smr.sharedMesh.vertexCount);
+              " verts=" + smr.sharedMesh.vertexCount +
+              " boundsCenter=" + smr.bounds.center.ToString("F3") +
+              " boundsSize=" + smr.bounds.size.ToString("F3"));
         }
 
         foreach (var obj in AssetDatabase.LoadAllAssetsAtPath("Assets/VRChat_Conversion/SakurabaEma_ByPOWER_VRChat.fbx"))

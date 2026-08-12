@@ -107,7 +107,9 @@ public static class EmaFixBuild
             string rootName = pb.rootTransform != null ? pb.rootTransform.name : pb.name;
             List<string> toAssign = new();
             if (rootName.Contains("Hair")) toAssign.AddRange(new[] { "PB_Collider_Head", "PB_Collider_Chest" });
-            else if (rootName.Contains("Skirt")) toAssign.AddRange(new[] { "PB_Collider_Hips", "PB_Collider_LLeg", "PB_Collider_RLeg", "PB_Collider_LShin", "PB_Collider_RShin" });
+            // Four skirt colliders keep waist and upper-leg collision while
+            // staying below the PC PhysBone collision-check budget.
+            else if (rootName.Contains("Skirt")) toAssign.AddRange(new[] { "PB_Collider_Hips", "PB_Collider_Chest", "PB_Collider_LLeg", "PB_Collider_RLeg" });
             else if (rootName.Contains("ChestRb")) toAssign.Add("PB_Collider_Chest");
 
             pb.colliders.Clear();

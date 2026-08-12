@@ -1,0 +1,20 @@
+SakurabaEma VRChat performance audit
+===================================
+Triangles are Unity imported triangle counts; mobile limits are SDK 3.7.6 Quest limits.
+
+PC raw stats (SDK rating calculation unavailable in headless audit)
+  triangles=66014, skinnedMeshes=3, meshes=0, materials=13, animators=1, bones=342, texturesMB=21.33333
+  physBones=3/219/5/372, contacts=0, constraints=0/0
+  PC target result=Poor (no Very Poor overperformance condition)
+
+Mobile raw stats (SDK rating calculation unavailable in headless audit)
+  triangles=66014, skinnedMeshes=3, meshes=0, materials=13, animators=1, bones=342, texturesMB=21.33333
+  physBones=3/219/5/372, contacts=0, constraints=0/0
+
+Renderer detail
+SakurabaEma_Body: vertices=48592, triangles=43092, materials=6, bones=342, blendShapes=0, readWrite=True
+SakurabaEma_Face: vertices=8041, triangles=12285, materials=6, bones=342, blendShapes=86, readWrite=True
+SakurabaEma_Hair: vertices=7140, triangles=10637, materials=1, bones=342, blendShapes=85, readWrite=True
+PhysBone ChestRb_Root: transforms=11, colliders=1
+PhysBone Hair_Root: transforms=136, colliders=2
+PhysBone Skirt_Root: transforms=72, colliders=4

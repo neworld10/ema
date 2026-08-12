@@ -96,6 +96,7 @@ InitTestScene*.unity*
 # VRChat / conversion scratch
 VRChatSDK_ErrorScreenShot/
 UnityEditor.log
+work/
 
 # Blender backups
 *.blend1
@@ -106,3 +107,6 @@ Screenshot*.png
 
 # Unity crash dumps
 mono_crash.mem.*
+
+
+session-ses_012f.md
